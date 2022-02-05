@@ -23,14 +23,14 @@ const Home = () => {
     <>
       <MainImage />
       <section class="main">
-        <ul class="items">
+        <div class="item-list">
           {items &&
             items.map((item) => (
-              <li>
+              <div class="item">
                 <Item key={item.id} item={item} />
-              </li>
+              </div>
             ))}
-        </ul>
+        </div>
       </section>
     </>
   );

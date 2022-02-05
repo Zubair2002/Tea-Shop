@@ -2,6 +2,10 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
+}
+p {
+  color: #4a4a4a;
 }
 .titel {
   color: black;
@@ -9,17 +13,20 @@ body {
 .main-visual img {
   width: 100%;
 }
-
+/**********************
+*****Header
+***********************/
 .header-box {
   width: 100%;
-  height: 50px;
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
 }
 
 .views {
-  font-family: rockwell;
+  font-family: "Roboto";
   color: black;
   font-size: 25px;
   font-weight: bold;
@@ -27,17 +34,18 @@ body {
 
 .header {
   justify-content: flex-start;
-  margin-left: 15px;
-  margin-top: 15px;
+  padding: 0px 30px;
 }
 .header-box a {
   text-decoration: none;
 }
 header .header-links {
   display: flex;
-  width: 15%;
+  width: 20%;
   font-size: 1.2em;
-  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
 }
 
 header .header-links p {
@@ -48,6 +56,8 @@ header .header-links p {
 header .header-links .sign-in-link {
   padding: 5px 20px;
   font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 header .header-links .sign-in-link a {
@@ -62,19 +72,19 @@ header .header-links .sign-in-link .logout {
 
 header .header-links .img img {
   width: 30px;
-  margin-left: 100%;
   padding: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 500px) {
   header .header-links {
     width: 35%;
   }
   header .header-links .sign-in-link {
     padding: 5px 15px;
+    font-size: 15px;
   }
-  ul.items li .info .name {
-    margin: -5% 0% 26% 10%;
+  .views {
+    font-size: 15px;
   }
 }
 .sign-in {
@@ -92,7 +102,6 @@ header .header-links .img img {
   width: 100%;
   margin-left: 0;
   margin-bottom: 2%;
-  height: 450px;
 }
 
 .content {
@@ -100,147 +109,110 @@ header .header-links .img img {
   margin-top: 0;
   width: 100%;
 }
-
-ul.items li {
-  list-style: none;
-  padding-bottom: 60px;
-}
-ul.items li img {
-  width: 30%;
-  border-radius: 5%;
-}
-ul.items li .info {
-  width: 70%;
-  position: relative;
-  padding: 5px 15px;
-  float: right;
-  margin-top: -19%;
-}
-ul.items li .info .name {
-  font-weight: 700;
-  font-size: 20px;
-  color: #0a0202;
-  margin: -5% 0% 26% 5%;
-  font-family: rockwell;
-}
-@media screen and (max-width: 900px) {
-  ul.items li .info .name {
-    margin: -5% 0% 26% 10%;
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  header .header-links {
+    width: 25%;
   }
 }
-ul.items li .info .info-bottom {
-  position: absolute;
-  left: 7%;
-  bottom: 10px;
-  width: 90%;
+@media screen and (min-width: 500px) and (max-width: 550px) {
+  header .header-links {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 280px) {
+  header {
+    padding: 0px 0px;
+  }
+  header .header-links {
+    width: 50%;
+  }
+}
+/*******************
+*****Items
+********************/
+.item-list .item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  width: 95%;
+}
+.item-list .item img {
+  width: 30%;
+}
+.item-list .item .info {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 20px;
 }
-@media screen and (max-width: 900px) {
-  ul.items li .info .info-bottom {
-    left: 13%;
-  }
+.item-list .item .info .info-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-ul.items li .info .info-bottom .price {
-  padding-top: 5px;
-  font-size: 20px;
-  color: #0a0202;
-  font-weight: lighter;
+.item-list .item .info .name {
+  font-size: 30px;
+  font-weight: bolder;
 }
-ul.items li .info .info-bottom .add {
-  border: 1px solid black;
-  font-size: 20px;
-  padding: 5px 25px;
-  cursor: pointer;
-  background-color: black;
-  color: white;
+.item-list .item .info .info-bottom .price {
+  font-size: 30px;
+  font-weight: 400;
+}
+.item-list .item .info .info-bottom .add {
+  padding: 10px 40px;
+  background-color: #000;
+  border: 0;
   border-radius: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
 }
-
-ul.items li .info .info-bottom .number {
-  border: 1px solid black;
-  font-size: 20px;
-  padding: 5px 15px;
-  color: #e4e4e4;
-  background-color: black;
-  position: relative;
+.item-list .item .info .info-bottom .number {
+  padding: 10px 40px;
+  background-color: #000;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
 }
-
-ul.items li .info .info-bottom .number .plus,
-ul.items li .info .info-bottom .number .minus,
-ul.items li .info .info-bottom .number .count {
-  padding: 3px;
+.item-list .item .info .info-bottom .number .count {
+  padding: 0px 10px;
 }
-
-ul.items li .info .info-bottom .number .plus,
-ul.items li .info .info-bottom .number .minus {
-  padding: 3px;
-  cursor: pointer;
-}
-
+/**********************
+****Media Screen
+***********************/
 @media screen and (max-width: 500px) {
-  .content {
-    padding: 0px 0px 0px 0px;
+  .item-list .item .info {
+    padding: 0px 10px;
   }
-  .main-visual img {
-    height: 200px;
-  }
-  .main-visual .main-catch {
-    top: 54px;
-    position: absolute;
-    color: white;
-    left: 1px;
-    font-size: 17px;
-    margin: 0 2% 0 2%;
-  }
-  ul.items li {
-    padding: 0% 0% 5% 0%;
-  }
-
-  ul.items li .info .name {
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .content .item-image {
-    width: 60%;
-  }
-
-  ul.items li .info .name-bottom .count {
-    padding: 7px 10px 0 5px;
-    font-size: 13px;
-  }
-
-  ul.items li .info .info-bottom {
-    position: relative;
-    left: 17%;
-    justify-content: space-around;
-  }
-
-  ul.items li .info .info-bottom .price {
-    padding-top: 5px;
+  .item-list .item .info .name {
     font-size: 15px;
+    font-weight: 300;
   }
-
-  ul.items li .info .info-bottom .add {
-    font-size: 14px;
-    padding: 0px 15px;
-    line-height: 24px;
-    background-color: black;
+  .item-list .item .info .info-bottom .price {
+    font-size: 15px;
+    font-weight: 300;
   }
-
-  ul.items li .info .info-bottom .number {
-    font-size: 14px;
-    padding: 0px 5px;
-    line-height: 24px;
-    color: white;
-    background-color: black;
+  .item-list .item .info .info-bottom .add {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 5px;
+  }
+  .item-list .item .info .info-bottom .number {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 }
-
+/**********************
+****Footer
+***********************/
 footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  left: 0%;
   display: flex;
   justify-content: flex-end;
   padding: 10px 0px;
@@ -249,17 +221,10 @@ footer {
   border: 1px solid rgba(194, 232, 194, 0.18823529411764706);
   width: 100%;
 }
-@media screen and (max-width: 280px) {
-  footer {
-    position: relative;
-  }
-}
-
 footer .subtotal {
   font-family: Roboto;
   color: black;
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -269,10 +234,22 @@ footer button {
   background-color: black;
   color: #ffffff;
   border: 0;
-  padding: 8px 15px;
-  font-size: 15px;
+  padding: 10px 30px;
+  font-size: 30px;
   font-family: Roboto;
   cursor: pointer;
+}
+/********************
+***Media Screen
+*********************/
+@media screen and (max-width: 500px) {
+  footer .subtotal {
+    font-size: 20px;
+  }
+  footer button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
 }
 @media screen and (max-width: 280px) {
   footer button {
@@ -509,6 +486,108 @@ footer button {
   font-weight: bold;
 }
 
+/****************************
+****Cart
+*****************************/
+.main .cart-list .cart-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 30px;
+}
+.main .cart-list .cart-item .info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 10px;
+  width: 100%;
+}
+.main .cart-list .cart-item .item-image img {
+  width: 100%;
+}
+.main .cart-list .cart-item .info .info-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .cart-list .cart-item .info .name {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.main .cart-list .cart-item .info .info-bottom .price {
+  font-size: 30px;
+  font-weight: 400;
+}
+.main .cart-list .cart-item .info .info-bottom .add {
+  padding: 10px 40px;
+  background-color: #000;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+}
+.main .cart-list .cart-item .info .info-bottom .number {
+  padding: 10px 40px;
+  background-color: #000;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+}
+.main .cart-list .cart-item .info .info-bottom .number .count {
+  padding: 0px 10px;
+}
+/****************************
+****Media Screen
+*****************************/
+@media screen and (max-width: 500px) {
+  .main .cart-list .cart-item {
+    padding: 10px 5px;
+  }
+  .main .main-visual .main-catch img {
+    width: 100%;
+  }
+  .main .cart-list .cart-item .item-image {
+    width: 50%;
+  }
+  .main .cart-list .cart-item .item-image img {
+    width: 100%;
+  }
+  .main .cart-list .cart-item .info {
+    padding: 5px 10px;
+  }
+  .main .cart-list .cart-item .info .name {
+    font-size: 15px;
+  }
+  .main .cart-list .cart-item .info .info-bottom .price {
+    font-size: 15px;
+  }
+  .main .cart-list .cart-item .info .info-bottom .number {
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 540px) {
+  .main .cart-list .cart-item {
+    padding: 10px 10px;
+  }
+  .main .cart-list .cart-item .info .name {
+    font-size: 15px;
+  }
+  .main .cart-list .cart-item .info {
+    padding: 10px 10px;
+  }
+  .main .cart-list .cart-item .info .info-bottom .price {
+    font-size: 15px;
+  }
+  .main .cart-list .cart-item .info .info-bottom .number {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 850px) {
+}
 /* .details .box2 .selected1 {
   display: flex;
   justify-content: space-between;
