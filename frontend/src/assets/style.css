@@ -68,16 +68,18 @@ header .header-links .sign-in-link a {
 header .header-links .sign-in-link .logout {
   color: black;
   cursor: pointer;
+  margin-left: 120px;
 }
 
 header .header-links .img img {
   width: 30px;
   padding: 0;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 500px) {
   header .header-links {
-    width: 35%;
+    width: 61%;
   }
   header .header-links .sign-in-link {
     padding: 5px 15px;
@@ -109,14 +111,19 @@ header .header-links .img img {
   margin-top: 0;
   width: 100%;
 }
+@media screen and (min-width: 500px) and (max-width: 850px){
+  header .header-links {
+    width: 30%;
+  }
+}
 @media screen and (min-width: 500px) and (max-width: 850px) {
   header .header-links {
-    width: 25%;
+    width: 35%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 550px) {
   header .header-links {
-    width: 35%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 280px) {
